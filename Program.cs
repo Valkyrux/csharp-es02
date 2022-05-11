@@ -25,17 +25,18 @@ namespace es02 // Note: actual namespace depends on the project name.
             while(iChoose != 9){
                 Console.WriteLine("Digita il numero del tipo di operazione da effettuare e premi invio\n");
 
-                Console.WriteLine("************************************");
-                Console.WriteLine("*  0 - addizione                   *");
-                Console.WriteLine("*  1 - sottrazione                 *");
-                Console.WriteLine("*  2 - moltiplicazione             *");
-                Console.WriteLine("*  3 - divisione                   *");
-                Console.WriteLine("*  4 - quadrato                    *");
-                Console.WriteLine("*  5 - media                       *");
-                Console.WriteLine("*  6 - elevazione a potenza n      *");
-                Console.WriteLine("*  7 - trova max e min del vettore *");
-                Console.WriteLine("*  9 - exit                        *");
-                Console.WriteLine("************************************");
+                Console.WriteLine("  **************************************");
+                Console.WriteLine("  *  0 - addizione                     *");
+                Console.WriteLine("  *  1 - sottrazione                   *");
+                Console.WriteLine("  *  2 - moltiplicazione               *");
+                Console.WriteLine("  *  3 - divisione                     *");
+                Console.WriteLine("  *  4 - quadrato                      *");
+                Console.WriteLine("  *  5 - media                         *");
+                Console.WriteLine("  *  6 - elevazione a potenza n        *");
+                Console.WriteLine("  *  7 - trova max e min del vettore   *");
+                Console.WriteLine("  *  8 - trova un mediano del vettore  *");
+                Console.WriteLine("  *  9 - exit                          *");
+                Console.WriteLine("  **************************************");
 
                 Console.WriteLine("\n* digita uno dei valori indicati e premi invio:");
                 if (int.TryParse(Console.ReadLine(), out iChoose))
@@ -113,7 +114,8 @@ namespace es02 // Note: actual namespace depends on the project name.
 
                     else if (iChoose == 7)
                     {
-                        Console.WriteLine("Inserisci i valori per il vettore separati da uno spazio");
+                        Console.WriteLine("\n*** MIN E MAX DI UN VETTORE ***\n");
+                        Console.WriteLine("Inserisci i valori interi per il vettore separati da uno spazio");
                         string sNumeri = Console.ReadLine();
                         if(sNumeri == null)
                         {
@@ -135,7 +137,8 @@ namespace es02 // Note: actual namespace depends on the project name.
 
                     else if (iChoose == 8)
                     {
-                        Console.WriteLine("Inserisci i valori per il vettore separati da uno spazio");
+                        Console.WriteLine("\n*** PRIMO MEDIANO TROVATO IN ARRAY ***\n");
+                        Console.WriteLine("Inserisci i valori interi per il vettore separati da uno spazio");
                         string sNumeri = Console.ReadLine();
                         if (sNumeri == null)
                         {
