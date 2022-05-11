@@ -46,5 +46,49 @@
             }
             return potenza;
         }
+
+        public static int trovaMaxInVettore(int[] arrayNumber)
+        {
+            int maxNumber = arrayNumber[0];
+            foreach(int value in arrayNumber)
+            {
+                if (value > maxNumber)
+                {
+                    maxNumber = value;
+                }
+            }
+            return maxNumber;
+        }
+
+        public static int trovaMinInVettore(int[] arrayNumber)
+        {
+            int minNumber = arrayNumber[0];
+            foreach (int value in arrayNumber)
+            {
+                if (value < minNumber)
+                {
+                    minNumber = value;
+                }
+            }
+            return minNumber;
+        }
+
+        public static float trovaMediano(float[] arrayNumber)
+        {
+            float media = myMethods.media(arrayNumber);
+            float scarto = Math.Abs((float)arrayNumber[0] - media);
+            int medianoIndex = 0;
+
+            for (int i = 0; i < arrayNumber.Length; i++)
+            {
+                if ((float)arrayNumber[i] - media < scarto)
+                {
+                    scarto = Math.Abs((float)arrayNumber[i] - media);
+                    medianoIndex = i;
+                }
+            }
+
+            return arrayNumber[medianoIndex];
+        }
     }
 }
